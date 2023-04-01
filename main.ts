@@ -11,7 +11,7 @@ let Calculation=async () => {
         {
             name:"Operation",
             type: "number",
-            message:chalk.green("Press 1 For Addition (+):  \n Press 2 For Subtraction(-): \n Press 3 for Division(÷): \n Press 4 For Multiplication(x): \n Press 5 For Modulo(%): \n Your Input: ")
+            message:chalk.green("Press 1 For Addition (+):  \n Press 2 For Subtraction(-): \n Press 3 for Division(÷): \n Press 4 For Multiplication(x): \n Press 5 For Modulo(%): \n Please Select An Operation From 1 to 5: ")
         },
         {
             name: "Value2",
@@ -19,19 +19,26 @@ let Calculation=async () => {
             message: chalk.green("Please Enter Your Second Number: "),
         }
     ]);
-    if(CalculationData.Operation ===1){
-        console.log(chalk.green(`The Answer Of ${CalculationData.Value1} + ${CalculationData.Value2} is = ${CalculationData.Value1 + CalculationData.Value2}`));
-    }else if(CalculationData.Operation ===2){
-        console.log(chalk.green(`The Answer Of ${CalculationData.Value1} - ${CalculationData.Value2} is = ${CalculationData.Value1 - CalculationData.Value2}`));
-    }else if(CalculationData.Operation ===3){
-        console.log(chalk.green(`The Answer Of ${CalculationData.Value1} ÷ ${CalculationData.Value2} is = ${CalculationData.Value1 / CalculationData.Value2}`));
-    }else if(CalculationData.Operation ===4){
-        console.log(chalk.green(`The Answer Of ${CalculationData.Value1} x ${CalculationData.Value2} is = ${CalculationData.Value1 * CalculationData.Value2}`));
-    }else if(CalculationData.Operation ===5){
-        console.log(chalk.green(`The Answer Of ${CalculationData.Value1} % ${CalculationData.Value2} is = ${CalculationData.Value1 % CalculationData.Value2}`));
-    }
-    else{
-        console.log(chalk.green("Your Input Is Incorrect"));
+    
+    switch (CalculationData.Operation) {
+        case 1:
+            console.log(chalk.green(`The Answer Of ${CalculationData.Value1} + ${CalculationData.Value2} is = ${CalculationData.Value1 + CalculationData.Value2}`));
+            break;
+        case 2:
+            console.log(chalk.green(`The Answer Of ${CalculationData.Value1} - ${CalculationData.Value2} is = ${CalculationData.Value1 - CalculationData.Value2}`));
+            break;    
+        case 3:
+            console.log(chalk.green(`The Answer Of ${CalculationData.Value1} ÷ ${CalculationData.Value2} is = ${CalculationData.Value1 / CalculationData.Value2}`));
+            break;
+        case 4:
+            console.log(chalk.green(`The Answer Of ${CalculationData.Value1} x ${CalculationData.Value2} is = ${CalculationData.Value1 * CalculationData.Value2}`));
+            break;
+        case 5:
+            console.log(chalk.green(`The Answer Of ${CalculationData.Value1} % ${CalculationData.Value2} is = ${CalculationData.Value1 % CalculationData.Value2}`));
+            break;        
+        default:
+            console.log(chalk.green("Your Input Is Incorrect"));
+            break;
     }
 }
 //Main Function
