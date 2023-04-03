@@ -11,11 +11,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.15.11"
   },
   "dependencies": {
     "chalk": "^5.2.0",
+    "figlet": "^1.5.2",
     "inquirer": "^9.1.5"
+  },
+  "bin": {
+    "calculator-uzi":"main.js"
   }
 }
