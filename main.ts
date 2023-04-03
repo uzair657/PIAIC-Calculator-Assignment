@@ -5,22 +5,24 @@ import figlet from "figlet";
 let Calculation=async () => {
     console.log(figlet.textSync("CALCULATOR"));
     let CalculationData = await inquirer.prompt([
-
+        //First Number Block
         {
             name: "Value1",
             type: "number",
             message: chalk.green("Please Enter Your First Number: "),
         },
+        //Second Number Block
+        {
+            name: "Value2",
+            type: "number",
+            message: chalk.green("Please Enter Your Second Number: "),
+        },
+        //Operations List block
         {
             name:"Operation",
             type: "number",
             message:chalk.green("Press 1 For Addition (+):  \n Press 2 For Subtraction(-): \n Press 3 for Division(÷): \n Press 4 For Multiplication(x): \n Press 5 For Modulo(%): \n Please Select An Operation From 1 to 5: ")
         },
-        {
-            name: "Value2",
-            type: "number",
-            message: chalk.green("Please Enter Your Second Number: "),
-        }
     ]);
     
     switch (CalculationData.Operation) {

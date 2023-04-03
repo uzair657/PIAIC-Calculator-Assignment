@@ -1,7 +1,7 @@
 {
-  "name": "piaic-calculator-assignment",
-  "version": "1.0.0",
-  "description": "",
+  "name": "calculatorq1-uzair",
+  "version": "1.0.1",
+  "description": "A CLI based Calculator that will perform all operations as per user requirements",
   "main": "index.js",
   "type": "module",
   "scripts": {
